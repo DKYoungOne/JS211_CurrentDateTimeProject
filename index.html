@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="main.js"></script>
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -11,5 +10,28 @@
     <div id="display-element"></div>
     <button onclick="displayDate()">Click Me</button>
     <hr/>
+    <div> 
+      <span>Add numbers: </span>
+      <form id="addForm">
+        <input type="number" placeholder="First Number" id="num1">
+        <input type="number" placeholder="Second Number" id="num2">
+        <input type="submit" name="submit">
+        <div id="display-addition"></div>  
+      </form>
+      <hr>
+      <form id="dataTypeForm">
+        <input type="text" id="whatIsThis">
+        <input type="submit" value="What is this data type?">
+        <div id="display-data-type"></div>
+      </form>
+      <hr>
+      <form id="fieldsFilled">
+        <input type="text" placeholder="Do/do not enter something" id="field1">
+        <input type="text" placeholder="Do/do not enter something" id="field2">
+        <input type="submit" value="How many fields did you fill?">
+        <div id="fields-filled-result"></div>
+      </form>
+    </div>
+    <script src="main.js"></script>
   </body>
 </html>
