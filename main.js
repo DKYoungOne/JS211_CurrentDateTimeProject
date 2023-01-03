@@ -16,11 +16,11 @@ const displayDate = () => {
 
 // Write a JavaScript program to convert a number to a string.
 
-
+const convertNumToString = (num) => String(num);
 
 // Write a JavaScript program to convert a string to the number.
 
-
+const convertStringToNum = (string) => Number(string);
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
