@@ -42,9 +42,12 @@ const add = (num1, num2) => Number(num1) + Number(num2);
 // Write a JavaScript program that runs only when 2 things are true.
 // Write a JavaScript program that runs when 1 of 2 things are true.
 // Write a JavaScript program that runs when both things are not true. 
-const noneTrue = (a, b) => !a && !b ? console.log('You do not have any fields filled') : console.log('error');
-const oneTrue = (a, b) => a || b ? console.log('one fieldfilled') : noneTrue(a, b);
-const twoTrue = (a, b) => a && b ? console.log('both fields filled') : oneTrue(a, b);
+//I ordered it like this to help with the program I am writing, which compares two fields and their contents on the DOM
+const fieldsFilledResult = document.getElementById('fields-filled-result');
+
+const noneTrue = (a, b) => !a.value && !b.value ? fieldsFilledResult.innerHTML = 'You do not have any fields filled!' : console.log('error');
+const oneTrue = (a, b) => a.value || b.value ? fieldsFilledResult.innerHTML = 'One field filled!' : noneTrue(a, b);
+const twoTrue = (a, b) => a.value && b.value ? fieldsFilledResult.innerHTML = 'Both fields filled!' : oneTrue(a, b);
 
 
 
@@ -88,6 +91,15 @@ dataTypeForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const dataType = dataTypeIdentify(whatIsThis.value);
   document.getElementById("display-data-type").innerHTML = dataType;
+})
+
+//Fields Filled JS
+const fieldsFilled = document.getElementById('fieldsFilled');
+fieldsFilled.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const a = document.getElementById('field1');
+  const b = document.getElementById('field2');
+  twoTrue(a, b);
 })
 
 
